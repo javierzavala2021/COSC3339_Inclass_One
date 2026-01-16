@@ -30,9 +30,9 @@ def calculate_shipping_cost(weight, destination):
     cost = 0.0
     
     if destination == "US":
-        base_cost = 5.0
-        if weight <= 10:
-            cost = base_cost
+        base_cost = 10.0
+        if weight <= 15:
+            cost = base_cost+5
         else:
             # Over 10 lbs, add $1 per extra lb
             extra_weight = weight - 10
